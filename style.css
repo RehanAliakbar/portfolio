@@ -39,6 +39,8 @@ html{
 
 }
 
+
+
 header{
     width: 100%;
     position: fixed;
@@ -81,6 +83,11 @@ header ul li a{
     color: var(--bg-light);
     font-size: 1.1rem;
     font-weight: 500;
+    transition: color .3s ease;
+}
+
+header ul li a:hover{
+    color: var(--primary-color);
 }
 
 header .menu-btn{
@@ -123,6 +130,29 @@ header nav .mobile-nav{
     /* background: rosybrown; */
     color: #111;
     
+}
+.heading{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    background: #fff;
+    /* transform: translate(-50%, -50%); */
+    clip-path: circle(40px at var(--x ) var(--y ));
+}
+.overlay h2{
+    color: var(--primary-color);
+}
+.overlay h1{
+    color: var(--primary-color);
+}
+.overlay h1 span{
+    color: var(--text-light);
 }
 
 .left-hero h2{
@@ -199,15 +229,38 @@ header nav .mobile-nav{
     font-weight: 500;
     transition: background .3s ease;
     box-shadow: 0 5px 10px rgba(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.hero-btns .btn i{
+    transition: transform .3s ease;
 }
 .primary-btn{
     background: var(--primary-color);
+    transition: all .3s ease;
 }
+
+.primary-btn:hover{
+    background: var(--primary-color-rgba);
+    color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, .1);
+}
+
+.primary-btn:hover i{
+    transform: translateX(5px);
+} 
 
 .secondary-btn{
     border: 1px solid var(--primary-color);
     background: rgba(255, 255, 255, .05);
 
+}
+
+.secondary-btn:hover{
+    background: var(--bg-light);
+    color: var(--bg-dark);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, .1);
 }
 
 .right-hero .hero-img-container{
@@ -342,6 +395,7 @@ header nav .mobile-nav{
     align-items: center;
     flex-shrink: 0;
     margin-top: 2rem;
+    perspective: 1000px;
 }
 .skill-card .skill-img{
     width: 60%;
@@ -410,7 +464,9 @@ header nav .mobile-nav{
     padding: 1rem;
     margin-top: 2rem;
     background: rgba(255, 255, 255, .05);
+    perspective: 1000px;
 }
+
 
 .project-card .project-img{
     width: 50%;
@@ -544,6 +600,11 @@ header nav .mobile-nav{
     cursor: pointer;
     font-weight: 500;
     justify-self: center;
+    transition: all .3s ease ;
+}
+
+.contact-right form button i{
+    transition: transform .3s ease;
 }
 
 .form-btn{
