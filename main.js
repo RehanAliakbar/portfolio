@@ -72,7 +72,7 @@ skillData.forEach((skill) => {
   skillCard.classList.add("skill-card");
   skillCard.innerHTML = `
     <div class="skill-img">
-              <img src=${skill.img} alt="${skill.name} loading="lazy">
+              <img src=${skill.img} alt=${skill.name} loading="lazy">
             </div>
             <div class="skill-content">
               <h3>${skill.name}</h3>
@@ -94,7 +94,7 @@ projectData.forEach((project) => {
   projectCard.classList.add("project-card");
   projectCard.innerHTML = `
     <div class="project-img">
-              <img src= ${project.img} alt= ${project.name} loading="lazy" >
+              <img src= ${!project.img ? './images/Load.svg': project.img} alt= ${project.title} loading="lazy" >
 
             </div>
 
